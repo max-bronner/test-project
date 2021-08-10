@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { fetchJson } from "./utils/utils";
+import { useEffect, useState } from "react";
+import { 
+  BrowserRouter,
+  Switch,
+  Route
+} from "react-router-dom";
+
+import Page from './pages/Page';
+import Header from "./components/Header/Header";
 
 function App() {
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    fetchJson('/data.json')
+      .then((data) => setData(data));
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        {data.header && <Header content={data} />}
+        <Switch>
+          <Route path="/articles">
+            <Page />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

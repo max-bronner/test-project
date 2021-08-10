@@ -1,0 +1,28 @@
+{
+  "head": {
+    "title": "Article Overview",
+    "meta": [
+      {"name": "description",
+        "content": "Overview page for articles"},
+      {"property": "og:title",
+        "content": "Article Overvie"},
+      {"property": "og:description",
+        "content": "Overview page for articles"}
+    ]
+  },
+  "components": [
+    {
+      "name": "ArticleOverview",
+      "content": [
+        { "title": "Title 1", "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum sit amet justo donec enim diam vulputate ut pharetra.", "author": "T. Mustermann", "link": "/articles/article1" }, 
+        { "title": "Title 2", "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum sit amet justo donec enim diam vulputate ut pharetra.", "author": "T. Mustermann", "link": "/articles/article2" }, 
+        { "title": "Title 3", "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum sit amet justo donec enim diam vulputate ut pharetra.", "author": "T. Mustermann", "link": "/articles/article3" }, 
+        { "title": "Title 4", "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum sit amet justo donec enim diam vulputate ut pharetra.", "author": "T. Mustermann", "link": "/articles/article4" }, 
+        { "title": "Title 5", "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum sit amet justo donec enim diam vulputate ut pharetra.", "author": "T. Mustermann", "link": "/articles/article1" }, 
+        { "title": "Title 6", "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum sit amet justo donec enim diam vulputate ut pharetra.", "author": "T. Mustermann", "link": "/articles/article2" }, 
+        { "title": "Title 7", "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum sit amet justo donec enim diam vulputate ut pharetra.", "author": "T. Mustermann", "link": "/articles/article3" }, 
+        { "title": "Title 8", "preview":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictum sit amet justo donec enim diam vulputate ut pharetra.", "author": "T. Mustermann", "link": "/articles/article4" }
+      ]
+    }
+  ]
+}

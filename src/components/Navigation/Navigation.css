@@ -1,0 +1,72 @@
+.navigation__button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  margin: 15px;
+  padding: 0;
+  text-align: center;
+}
+
+.navigation__button svg {
+  fill: #eee;
+  width: 40px;
+  height: 34px;
+}
+
+.navigation__list,
+.navigation__item__sublist {
+  display: none;
+}
+
+.navigation__list.active,
+.navigation__item__sublist.active {
+  display: initial;
+}
+
+
+.navigation__list {
+  width: 60vw;
+  height: calc(100vh - 80px);
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.navigation__item,
+.navigation__item__subitem {
+  min-height: 44px;
+}
+
+.navigation__item a,
+.navigation__item button {
+  font-size: 1.5em;
+  padding: 0;
+  text-decoration: none;
+  color: #eee;
+  background-color: transparent;
+  text-align: left;
+  width: 100%;
+  border: none;
+}
+
+.navigation__item button::after {
+  content: '>';
+  position: absolute;
+  right: 8px;
+  transition: 0.2s transform;
+}
+
+.navigation__item button[aria-expanded=true]::after {
+  transform: rotate(90deg);
+}
+
+
+
+@media (min-width: 480px) {
+  .navigation__list {
+    width: 288px;
+  }
+}

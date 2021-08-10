@@ -1,0 +1,37 @@
+.article-card {
+  border: #000 1px solid;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.article-card__link {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  text-decoration: none;
+  color: #111;
+}
+
+.article-card__link > * {
+  width: 100%;
+}
+
+.article-card__author {
+  align-self: flex-end;
+  text-align: right;
+}
+
+@media (min-width: 1024px) {
+  .article-card:first-child {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+
+  .article-card {
+    font-size: 1.2em;
+  }
+
+  .article-card:first-child {
+    font-size: 1.8em;
+  }
+}
