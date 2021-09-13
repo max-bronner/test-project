@@ -1,13 +1,9 @@
-import { fetchJson } from "./utils/utils";
-import { useEffect, useState } from "react";
-import { 
-  BrowserRouter,
-  Switch,
-  Route
-} from "react-router-dom";
+import { fetchJson } from './utils/utils';
+import { useEffect, useState } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Page from './pages/Page';
-import Header from "./components/Header/Header";
+import Header from './components/Header/Header';
 
 function App() {
   const [data, setData] = useState({});
