@@ -9,8 +9,7 @@ function App() {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    fetchJson('/data.json')
-      .then((data) => setData(data));
+    fetchJson('/data.json').then((data) => setData(data));
   }, []);
 
   return (
