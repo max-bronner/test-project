@@ -1,6 +1,9 @@
 import { fetchJson } from './utils/utils';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import TextInput from './components/Form/TextInput';
+import Checkbox from './components/Form/Checkbox';
+import FormWrapper from './components/Form/FormWrapper';
 
 import Page from './pages/Page';
 import Header from './components/Header/Header';
@@ -12,6 +15,10 @@ function App() {
     fetchJson('/data.json').then((data) => setData(data));
   }, []);
 
+  const handleFormSubmit = (formData) => {
+    console.log(formData);
+  };
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -21,6 +28,10 @@ function App() {
             <Page />
           </Route>
         </Switch>
+        <FormWrapper formType="contact" url="/submit" onSubmit={handleFormSubmit}>
+          <TextInput label="Name" name="name" />
+          <Checkbox label="Subscribe" name="subscribe" />
+        </FormWrapper>
       </BrowserRouter>
     </div>
   );
