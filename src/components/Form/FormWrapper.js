@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './FormWrapper.css';
 
 function FormWrapper({ children, formType, url, onSubmit }) {
   const [formData, setFormData] = useState({});
@@ -21,9 +22,11 @@ function FormWrapper({ children, formType, url, onSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} data-form-type={formType} action={url}>
+    <form className="form-wrapper" onSubmit={handleSubmit} data-form-type={formType} action={url}>
       {React.Children.map(children, (child) => React.cloneElement(child, { onChange: handleInputChange, value: formData[child.props.name] || '' }))}
-      <button type="submit">Submit</button>
+      <button className="form-wrapper__button" type="submit">
+        Submit
+      </button>
     </form>
   );
 }
