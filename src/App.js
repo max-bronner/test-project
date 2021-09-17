@@ -1,8 +1,9 @@
 import { fetchJson } from './utils/utils';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import TextInput from './components/Form/TextInput';
-import Checkbox from './components/Form/Checkbox';
+import TextInput from './components/Form/TextInput/TextInput';
+import Checkbox from './components/Form/Checkbox/Checkbox';
+import RadioButton from './components/Form/RadioButton/RadioButton';
 import FormWrapper from './components/Form/FormWrapper';
 
 import Page from './pages/Page';
@@ -31,6 +32,7 @@ function App() {
         <FormWrapper formType="contact" url="/submit" onSubmit={handleFormSubmit}>
           <TextInput label="Name" name="name" />
           <Checkbox label="Subscribe" name="subscribe" />
+          <RadioButton label="Interval" name="interval" />
         </FormWrapper>
       </BrowserRouter>
     </div>
