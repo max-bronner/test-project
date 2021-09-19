@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router";
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router';
+import reportWebVitals from '../reportWebVitals';
 
-import { MAP_COMPONENTS, META_TAGS_SELECTORS } from "../constants";
+import { MAP_COMPONENTS, META_TAGS_SELECTORS } from '../constants';
 
 function Page() {
-
   const [content, setContent] = useState({});
   const { pathname } = useLocation();
 
@@ -13,9 +13,9 @@ function Page() {
 
   useEffect(() => {
     fetch(endpoint)
-    .then(response => response.json())
-    .then(data => setContent(data));
-  }, [pathname ,endpoint]);
+      .then((response) => response.json())
+      .then((data) => setContent(data));
+  }, [pathname, endpoint]);
 
   // update head
   useEffect(() => {
@@ -42,21 +42,24 @@ function Page() {
     }
   }, [content]);
 
+  useEffect(() => {
+    reportWebVitals(console.log);
+  }, []);
+
   if (content.components) {
-    return(
+    return (
       <main>
-        {content.components && content.components.map((component, index) => {
-          const Component = MAP_COMPONENTS[component.name];
-          if (Component) {
-            return (
-              <Component key={ index }  content={ component.content }/>
-            );
-          } else {
-            return null;
-          }
-        })}
+        {content.components &&
+          content.components.map((component, index) => {
+            const Component = MAP_COMPONENTS[component.name];
+            if (Component) {
+              return <Component key={index} content={component.content} />;
+            } else {
+              return null;
+            }
+          })}
       </main>
-    )
+    );
   }
 
   return null;
