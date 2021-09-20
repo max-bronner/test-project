@@ -43,8 +43,16 @@ function Page() {
   }, [content]);
 
   useEffect(() => {
-    reportWebVitals(console.log);
-  }, []);
+    const handleVitals = (metric) => {
+      console.log(metric);
+    };
+
+    const vitals = reportWebVitals(handleVitals);
+
+    return () => {
+      vitals.disconnect();
+    };
+  }, [pathname]);
 
   if (content.components) {
     return (
