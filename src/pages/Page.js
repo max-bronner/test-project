@@ -44,7 +44,9 @@ function Page() {
 
   useEffect(() => {
     const handleVitals = (metric) => {
-      console.log(metric);
+      if (metric.navigationType === 'navigate') {
+        console.log('Web Vitals:', metric);
+      }
     };
 
     const vitals = reportWebVitals(handleVitals);
