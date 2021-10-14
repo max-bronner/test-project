@@ -1,20 +1,26 @@
-{ 
+{
   "header": {
     "title": "Test app",
-    "logo": "/logo192.png"
+    "logo": "/logo512.png"
   },
   "navigation": [
-    { "name": "articles", "link": "/articles" }, 
-    { "name": "item 1-2", "subitems": [
-      { "name": "item 1", "link": "/articles/article1" }, 
-      { "name": "item 2", "link": "/articles/article2" }
-    ]}, 
-    { "name": "item 3", "link": "/articles/article3" }, 
-    { "name": "item 1-4", "subitems": [
-      { "name": "item 1", "link": "/articles/article1" },
-      { "name": "item 2", "link": "/articles/article2" },
-      { "name": "item 3", "link": "/articles/article3" },
-      { "name": "item 4", "link": "/articles/article4" }
-    ]}
+    { "name": "articles", "link": "/articles" },
+    {
+      "name": "item 1-2",
+      "subitems": [
+        { "name": "item 1", "link": "/articles/article1" },
+        { "name": "item 2", "link": "/articles/article2" }
+      ]
+    },
+    { "name": "item 3", "link": "/articles/article3" },
+    {
+      "name": "item 1-4",
+      "subitems": [
+        { "name": "item 1", "link": "/articles/article1" },
+        { "name": "item 2", "link": "/articles/article2" },
+        { "name": "item 3", "link": "/articles/article3" },
+        { "name": "item 4", "link": "/articles/article4" }
+      ]
+    }
   ]
 }
